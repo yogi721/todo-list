@@ -5,6 +5,7 @@
                 integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
                 crossorigin="anonymous">
         </script>
+        <script src="/assets/todo-list.js"></script>
         <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
 
     </head>
@@ -16,10 +17,12 @@
                 <button type="submit">Add Item</button>
             </form>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <% for(var i=0; i < todos.length; i++){ %>
+                    <li><%= todos[i].item %></li>
+                <% } %>
+                
             </ul>
         </div>
+        
     </body>
 </html>

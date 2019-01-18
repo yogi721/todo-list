@@ -1,9 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function(){ // when document is ready we fire a function
 
-  $('form').on('submit', function(){
+  $('form').on('submit', function(){ //when we have a submit event we fire a function
 
-      var item = $('form input');
-      var todo = {item: item.val()};
+      var item = $('form input'); // we create variable which equal to the input field
+      var todo = {item: item.val()}; // we create variable which equal to an object and the item property in that object is set equal to the item variable .val()
 
       $.ajax({
         type: 'POST',
